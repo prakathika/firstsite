@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="prakathi.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <title>Prakathi</title>
+    <style>
+        .animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- homepage -->
+    <main>
+        <div class="navbars">
+            <nav class="icons">
+                <i class="fa-brands fa-facebook-f" style="color: #fe2020;"></i>
+                <i class="fa-brands fa-twitter" style="color: #666767;"></i>
+                <i class="fa-brands fa-instagram" style="color: #666767;"></i>
+                <i class="fa-brands fa-linkedin" style="color: #666767;"></i>
+            </nav>
+            <br><br>
+            <nav class="navbar">
+                <h1 class="name">Prakathi</h1>
+                <ul class="navul">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about" id="scrollToAbout">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="body">
+            <div class="leftbody animate" data-aos="fade-right">
+                <h4>HI THERE.</h4><br><br>
+                <h2>I'M Prakathika</h2><br>
+                <H5>UI/UX DESIGNER & FRONT-END DEVELOPER</H5><br><br><br><br><br><br>
+                <button>DOWNLOAD CV</button>
+            </div>
+            <div class="rightbody animate" data-aos="fade-left">
+                <img src="prakathi.jpg" alt="girl" loading="lazy">
+            </div>
+        </div>
+        <br><br><br><br><br><br><br>
+    </main>
+
+    <!-- who am i page -->
+
+    <div class="whoami" id="about">
+        <br><br><br>
+        <h2><span class="line">-</span> Who am i<span class="dot"> .</span></h2>
+        <h1>HELLO EVERYONE</h1>
+        <div class="allwho">
+            <div class="leftwho">
+                <div class="square">
+                    <img class="secgirl animate" src="prakathii.jpg" alt="girl" data-aos="fade-right">
+                </div>
+            </div>
+            <div class="rightwho" data-aos="fade-left">
+                <h6>
+                    Hello Everyone !
+                </h6><br><br>
+                <p>
+                  Hi I am Prakathika , Studying 2nd Year CSE in Hindusthan College of Engineering . I am a Webdeveloper having skills in tailwind , react js , Gsap , Particle js & many more. contact me directly to know more about me.
+                </p>
+                <button id="button1">HIRE ME NOW</button>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br>
+        <div class="bars">
+            <div class="wrapper">
+                <div class="skill animate" data-aos="fade-right">
+                    <p>HTML5</p>
+                    <div class="skill-bar skill1">
+                        <span class="skill-count1">95%</span>
+                    </div>
+                </div>
+                <div class="skill animate" data-aos="fade-left">
+                    <p>CSS3</p>
+                    <div class="skill-bar skill2">
+                        <span class="skill-count2">85%</span>
+                    </div>
+                </div>
+                <div class="skill animate" data-aos="fade-right">
+                    <p>JQUERY</p>
+                    <div class="skill-bar skill3">
+                        <span class="skill-count3">75%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrap1">
+                <div class="skill animate" data-aos="fade-left">
+                    <p>Tailwind</p>
+                    <div class="skill-bar skill1">
+                        <span class="skill-count1">95%</span>
+                    </div>
+                </div>
+                <div class="skill animate" data-aos="fade-right">
+                    <p>React js</p>
+                    <div class="skill-bar skill2">
+                        <span class="skill-count2">85%</span>
+                    </div>
+                </div>
+                <div class="skill animate" data-aos="fade-left">
+                    <p>Particle js</p>
+                    <div class="skill-bar skill3">
+                        <span class="skill-count3">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function redirectToWhatsApp() {
+                var whatsappNumber = "7448606383";
+                var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=Hello%20there!";
+                window.open(whatsappURL, '_blank');
+            }
+            var hireMeButton = document.getElementById("button1");
+            hireMeButton.addEventListener("click", redirectToWhatsApp);
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollToAboutLink = document.getElementById("scrollToAbout");
+            const aboutSection = document.getElementById("about");
+            let scrolling = false;
+            scrollToAboutLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (!scrolling) {
+                    scrolling = true;
+                    aboutSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                    setTimeout(function () {
+                        scrolling = false;
+                    }, 1500); 
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
